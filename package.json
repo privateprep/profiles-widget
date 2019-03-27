@@ -1,11 +1,11 @@
 {
-  "name": "profiles",
+  "name": "profiles-widget",
   "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "umd:main": "dist/index.umd.js",
   "module": "dist/index.m.js",
-  "source": "components/hello-world/index.js",
+  "source": "components/MarketProfiles/index.js",
   "scripts": {
     "test": "NODE_ENV=test jest",
     "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
@@ -30,6 +30,7 @@
     "sass-loader": "^6.0.6"
   },
   "dependencies": {
+    "cross-fetch": "^3.0.2",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
     "preact-habitat": "^3.1.0",
@@ -62,6 +63,9 @@
     "moduleDirectories": [
       "node_modules",
       "src"
-    ]
+    ],
+    "prettier": {
+      "trailingComma": "es5"
+    }
   }
 }
