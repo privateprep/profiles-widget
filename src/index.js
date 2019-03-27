@@ -8,6 +8,6 @@ import Widget from "./components/MarketProfiles";
 let _habitat = habitat(Widget);
 
 _habitat.render({
-  selector: '[data-widget-host="habitat"]',
+  selector: '[data-widget-host="profiles-widget"]',
   clean: true,
 });
