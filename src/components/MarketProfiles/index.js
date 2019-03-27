@@ -2,9 +2,8 @@ import { h, Component } from "preact";
 import fetch from "cross-fetch";
 import style from "./style";
 
-const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-const baseUrl = "https://staging.privateprep.com/feeds/profiles?roles=director";
-const localUrl = "http://localhost:5000/feeds/profiles?roles=director";
+const baseUrl =
+  "https://dashboard.privateprep.com/feeds/profiles?roles=director";
 
 const requestHeaders = {
   headers: {
@@ -26,7 +25,7 @@ export default class App extends Component {
   fetchProfiles = () => {
     this.setState({ isLoading: true });
 
-    fetch(`${localUrl}&location=${this.props.location}`, requestHeaders)
+    fetch(`${baseUrl}&location=${this.props.location}`, requestHeaders)
       .then(res => {
         if (!res.ok) {
           throw new Error(res.statusText);
